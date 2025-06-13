@@ -1,0 +1,267 @@
+\hypertarget{func_8cpp}{}\doxysection{func.\+cpp File Reference}
+\label{func_8cpp}\index{func.cpp@{func.cpp}}
+
+
+Implementation of random number generators and statistical tests for randomness analysis.  
+
+
+{\ttfamily \#include \char`\"{}func.\+h\char`\"{}}\newline
+Include dependency graph for func.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{func_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{func_8cpp_a9025339520d92b17ba6c888477c4850d}{incomplete\+Gamma\+Series}} (double a, double x)
+\begin{DoxyCompactList}\small\item\em Calculates incomplete gamma function using series expansion. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{func_8cpp_a5644fd627b57bc35fd52c8145f938559}{incomplete\+Gamma\+Continued\+Frac}} (double a, double x)
+\begin{DoxyCompactList}\small\item\em Calculates incomplete gamma function using continued fraction. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{func_8cpp_adb03c6078326921b44106b684d404d6a}{gammaQ}} (double a, double x)
+\begin{DoxyCompactList}\small\item\em Computes regularized upper incomplete gamma function Q(a,x) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{func_8cpp_a7a44ba142152b381ce81d40b793d3053}{Phi}} (double x)
+\begin{DoxyCompactList}\small\item\em Computes standard normal cumulative distribution function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{func_8cpp_a817049615892f91396d397a037e58762}{monobit\+TestP}} (const std\+::vector$<$ int $>$ \&bits)
+\begin{DoxyCompactList}\small\item\em Performs the monobit test on a binary sequence (NIST SP 800-\/22) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{func_8cpp_a5992dc44a88ace50533377cced708fdc}{block\+Frequency\+TestP}} (const std\+::vector$<$ int $>$ \&bits, int M=128)
+\begin{DoxyCompactList}\small\item\em Performs the block frequency test on a binary sequence (NIST SP 800-\/22) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{func_8cpp_ad29b768e1b42c5451b454957de0aff1c}{runs\+TestP}} (const std\+::vector$<$ int $>$ \&bits)
+\begin{DoxyCompactList}\small\item\em Performs the runs test on a binary sequence (NIST SP 800-\/22) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{func_8cpp_a4b119fffb47dc10148ab483056f4f382}{longest\+Run\+Ones\+TestP}} (const std\+::vector$<$ int $>$ \&bits)
+\begin{DoxyCompactList}\small\item\em Performs the longest run of ones test on a binary sequence (NIST SP 800-\/22) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{func_8cpp_a21a7175136055f14facddfd822711721}{cumulative\+Sums\+TestP}} (const std\+::vector$<$ int $>$ \&bits)
+\begin{DoxyCompactList}\small\item\em Performs the cumulative sums test on a binary sequence (NIST SP 800-\/22) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{func_8cpp_a34c9e2d0e6e3ef66e256fe3058d3fc32}{calculate\+Stats}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&values, double \&mean, double \&stddev, double \&cov)
+\begin{DoxyCompactList}\small\item\em Calculates basic statistics for a set of values. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{func_8cpp_a9460b6c91762f7b90de05387ebdf82c9}{chi\+Square\+TestP}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Performs chi-\/square goodness-\/of-\/fit test on random numbers. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{func_8cpp_ae6c437f10b84b9195df25eae82282928}{generate\+Bits}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Converts 32-\/bit values to a sequence of bits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{func_8cpp_a8be6ab9eca088a37609fc1f7a33dd86f}{perform\+NISTTests}} (const std\+::vector$<$ int $>$ \&bits, double \&p1, double \&p2, double \&p3, double \&p4, double \&p5)
+\begin{DoxyCompactList}\small\item\em Performs battery of NIST statistical tests on bit sequence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{func_8cpp_a5992dc44a88ace50533377cced708fdc}\label{func_8cpp_a5992dc44a88ace50533377cced708fdc}} 
+\index{func.cpp@{func.cpp}!blockFrequencyTestP@{blockFrequencyTestP}}
+\index{blockFrequencyTestP@{blockFrequencyTestP}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{blockFrequencyTestP()}{blockFrequencyTestP()}}
+{\footnotesize\ttfamily double block\+Frequency\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits,  }\item[{int}]{M = {\ttfamily 128} }\end{DoxyParamCaption})}
+
+Performs the block frequency test on a binary sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Vector of bits (0s and 1s) to test \\
+\hline
+{\em M} & Block size (default = 128) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P-\/value indicating the probability of randomness
+\end{DoxyReturn}
+Tests the proportion of ones within M-\/bit blocks to verify they are approximately 50\% \mbox{\Hypertarget{func_8cpp_a34c9e2d0e6e3ef66e256fe3058d3fc32}\label{func_8cpp_a34c9e2d0e6e3ef66e256fe3058d3fc32}} 
+\index{func.cpp@{func.cpp}!calculateStats@{calculateStats}}
+\index{calculateStats@{calculateStats}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{calculateStats()}{calculateStats()}}
+{\footnotesize\ttfamily void calculate\+Stats (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{values,  }\item[{double \&}]{mean,  }\item[{double \&}]{stddev,  }\item[{double \&}]{cov }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em values} & Input vector of 32-\/bit unsigned integers \\
+\hline
+\mbox{\texttt{ out}}  & {\em mean} & Calculated mean value \\
+\hline
+\mbox{\texttt{ out}}  & {\em stddev} & Calculated standard deviation \\
+\hline
+\mbox{\texttt{ out}}  & {\em cov} & Calculated coefficient of variation (stddev/mean) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{func_8cpp_a9460b6c91762f7b90de05387ebdf82c9}\label{func_8cpp_a9460b6c91762f7b90de05387ebdf82c9}} 
+\index{func.cpp@{func.cpp}!chiSquareTestP@{chiSquareTestP}}
+\index{chiSquareTestP@{chiSquareTestP}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{chiSquareTestP()}{chiSquareTestP()}}
+{\footnotesize\ttfamily double chi\+Square\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{values }\end{DoxyParamCaption})}
+
+Performs chi-\/square goodness-\/of-\/fit test.
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & Vector of 32-\/bit unsigned integers to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P-\/value indicating the probability of uniform distribution
+\end{DoxyReturn}
+Tests if the numbers are uniformly distributed across the range \mbox{\Hypertarget{func_8cpp_a21a7175136055f14facddfd822711721}\label{func_8cpp_a21a7175136055f14facddfd822711721}} 
+\index{func.cpp@{func.cpp}!cumulativeSumsTestP@{cumulativeSumsTestP}}
+\index{cumulativeSumsTestP@{cumulativeSumsTestP}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{cumulativeSumsTestP()}{cumulativeSumsTestP()}}
+{\footnotesize\ttfamily double cumulative\+Sums\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits }\end{DoxyParamCaption})}
+
+Performs the cumulative sums test on a binary sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Vector of bits (0s and 1s) to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P-\/value indicating the probability of randomness
+\end{DoxyReturn}
+Tests the maximum deviation of the cumulative sum of the sequence from zero \mbox{\Hypertarget{func_8cpp_adb03c6078326921b44106b684d404d6a}\label{func_8cpp_adb03c6078326921b44106b684d404d6a}} 
+\index{func.cpp@{func.cpp}!gammaQ@{gammaQ}}
+\index{gammaQ@{gammaQ}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{gammaQ()}{gammaQ()}}
+{\footnotesize\ttfamily double gammaQ (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{x }\end{DoxyParamCaption})}
+
+Calculates the regularized upper incomplete gamma function Q(a,x)
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Shape parameter \\
+\hline
+{\em x} & Upper limit of integration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of Q(a,x) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{func_8cpp_ae6c437f10b84b9195df25eae82282928}\label{func_8cpp_ae6c437f10b84b9195df25eae82282928}} 
+\index{func.cpp@{func.cpp}!generateBits@{generateBits}}
+\index{generateBits@{generateBits}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{generateBits()}{generateBits()}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ generate\+Bits (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{values }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & Vector of 32-\/bit unsigned integers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of bits (0s and 1s) extracted from the input values
+\end{DoxyReturn}
+Extracts all 32 bits from each input value (MSB first) \mbox{\Hypertarget{func_8cpp_a5644fd627b57bc35fd52c8145f938559}\label{func_8cpp_a5644fd627b57bc35fd52c8145f938559}} 
+\index{func.cpp@{func.cpp}!incompleteGammaContinuedFrac@{incompleteGammaContinuedFrac}}
+\index{incompleteGammaContinuedFrac@{incompleteGammaContinuedFrac}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{incompleteGammaContinuedFrac()}{incompleteGammaContinuedFrac()}}
+{\footnotesize\ttfamily double incomplete\+Gamma\+Continued\+Frac (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Shape parameter \\
+\hline
+{\em x} & Upper limit of integration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Computed value of incomplete gamma function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{func_8cpp_a9025339520d92b17ba6c888477c4850d}\label{func_8cpp_a9025339520d92b17ba6c888477c4850d}} 
+\index{func.cpp@{func.cpp}!incompleteGammaSeries@{incompleteGammaSeries}}
+\index{incompleteGammaSeries@{incompleteGammaSeries}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{incompleteGammaSeries()}{incompleteGammaSeries()}}
+{\footnotesize\ttfamily double incomplete\+Gamma\+Series (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Shape parameter \\
+\hline
+{\em x} & Upper limit of integration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Computed value of incomplete gamma function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{func_8cpp_a4b119fffb47dc10148ab483056f4f382}\label{func_8cpp_a4b119fffb47dc10148ab483056f4f382}} 
+\index{func.cpp@{func.cpp}!longestRunOnesTestP@{longestRunOnesTestP}}
+\index{longestRunOnesTestP@{longestRunOnesTestP}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{longestRunOnesTestP()}{longestRunOnesTestP()}}
+{\footnotesize\ttfamily double longest\+Run\+Ones\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits }\end{DoxyParamCaption})}
+
+Performs the longest run of ones test on a binary sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Vector of bits (0s and 1s) to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P-\/value indicating the probability of randomness
+\end{DoxyReturn}
+Tests the longest run of ones within M-\/bit blocks of the sequence \mbox{\Hypertarget{func_8cpp_a817049615892f91396d397a037e58762}\label{func_8cpp_a817049615892f91396d397a037e58762}} 
+\index{func.cpp@{func.cpp}!monobitTestP@{monobitTestP}}
+\index{monobitTestP@{monobitTestP}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{monobitTestP()}{monobitTestP()}}
+{\footnotesize\ttfamily double monobit\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits }\end{DoxyParamCaption})}
+
+Performs the monobit test on a binary sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Vector of bits (0s and 1s) to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P-\/value indicating the probability of randomness (values $>$= 0.\+01 suggest randomness)
+\end{DoxyReturn}
+Tests the proportion of ones and zeros in the sequence to verify they are approximately equal \mbox{\Hypertarget{func_8cpp_a8be6ab9eca088a37609fc1f7a33dd86f}\label{func_8cpp_a8be6ab9eca088a37609fc1f7a33dd86f}} 
+\index{func.cpp@{func.cpp}!performNISTTests@{performNISTTests}}
+\index{performNISTTests@{performNISTTests}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{performNISTTests()}{performNISTTests()}}
+{\footnotesize\ttfamily void perform\+NISTTests (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits,  }\item[{double \&}]{p1,  }\item[{double \&}]{p2,  }\item[{double \&}]{p3,  }\item[{double \&}]{p4,  }\item[{double \&}]{p5 }\end{DoxyParamCaption})}
+
+Performs a battery of NIST statistical tests on a bit sequence.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em bits} & Input bit sequence to test \\
+\hline
+\mbox{\texttt{ out}}  & {\em p1} & P-\/value from monobit test \\
+\hline
+\mbox{\texttt{ out}}  & {\em p2} & P-\/value from block frequency test \\
+\hline
+\mbox{\texttt{ out}}  & {\em p3} & P-\/value from runs test \\
+\hline
+\mbox{\texttt{ out}}  & {\em p4} & P-\/value from longest run of ones test \\
+\hline
+\mbox{\texttt{ out}}  & {\em p5} & P-\/value from cumulative sums test \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{func_8cpp_a7a44ba142152b381ce81d40b793d3053}\label{func_8cpp_a7a44ba142152b381ce81d40b793d3053}} 
+\index{func.cpp@{func.cpp}!Phi@{Phi}}
+\index{Phi@{Phi}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{Phi()}{Phi()}}
+{\footnotesize\ttfamily double Phi (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+Calculates the standard normal cumulative distribution function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Probability that a random variable is less than or equal to x 
+\end{DoxyReturn}
+\mbox{\Hypertarget{func_8cpp_ad29b768e1b42c5451b454957de0aff1c}\label{func_8cpp_ad29b768e1b42c5451b454957de0aff1c}} 
+\index{func.cpp@{func.cpp}!runsTestP@{runsTestP}}
+\index{runsTestP@{runsTestP}!func.cpp@{func.cpp}}
+\doxysubsubsection{\texorpdfstring{runsTestP()}{runsTestP()}}
+{\footnotesize\ttfamily double runs\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits }\end{DoxyParamCaption})}
+
+Performs the runs test on a binary sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Vector of bits (0s and 1s) to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P-\/value indicating the probability of randomness
+\end{DoxyReturn}
+Tests the total number of runs (both 0-\/runs and 1-\/runs) in the sequence 

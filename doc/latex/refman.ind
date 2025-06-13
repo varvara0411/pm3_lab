@@ -1,0 +1,119 @@
+\begin{theindex}
+
+  \item {blockFrequencyTestP}
+    \subitem {func.cpp}, \hyperpage{10}
+    \subitem {func.h}, \hyperpage{16}
+
+  \indexspace
+
+  \item {calculateStats}
+    \subitem {func.cpp}, \hyperpage{10}
+    \subitem {func.h}, \hyperpage{18}
+  \item {chiSquareTestP}
+    \subitem {func.cpp}, \hyperpage{11}
+    \subitem {func.h}, \hyperpage{18}
+  \item {cumulativeSumsTestP}
+    \subitem {func.cpp}, \hyperpage{11}
+    \subitem {func.h}, \hyperpage{19}
+
+  \indexspace
+
+  \item {func.cpp}, \hyperpage{9}
+    \subitem {blockFrequencyTestP}, \hyperpage{10}
+    \subitem {calculateStats}, \hyperpage{10}
+    \subitem {chiSquareTestP}, \hyperpage{11}
+    \subitem {cumulativeSumsTestP}, \hyperpage{11}
+    \subitem {gammaQ}, \hyperpage{11}
+    \subitem {generateBits}, \hyperpage{12}
+    \subitem {incompleteGammaContinuedFrac}, \hyperpage{12}
+    \subitem {incompleteGammaSeries}, \hyperpage{12}
+    \subitem {longestRunOnesTestP}, \hyperpage{13}
+    \subitem {monobitTestP}, \hyperpage{13}
+    \subitem {performNISTTests}, \hyperpage{13}
+    \subitem {Phi}, \hyperpage{14}
+    \subitem {runsTestP}, \hyperpage{14}
+  \item {func.h}, \hyperpage{15}
+    \subitem {blockFrequencyTestP}, \hyperpage{16}
+    \subitem {calculateStats}, \hyperpage{18}
+    \subitem {chiSquareTestP}, \hyperpage{18}
+    \subitem {cumulativeSumsTestP}, \hyperpage{19}
+    \subitem {gammaQ}, \hyperpage{19}
+    \subitem {generateBits}, \hyperpage{20}
+    \subitem {incompleteGammaContinuedFrac}, \hyperpage{20}
+    \subitem {incompleteGammaSeries}, \hyperpage{21}
+    \subitem {longestRunOnesTestP}, \hyperpage{21}
+    \subitem {monobitTestP}, \hyperpage{22}
+    \subitem {performNISTTests}, \hyperpage{22}
+    \subitem {Phi}, \hyperpage{23}
+    \subitem {runsTestP}, \hyperpage{24}
+
+  \indexspace
+
+  \item {gammaQ}
+    \subitem {func.cpp}, \hyperpage{11}
+    \subitem {func.h}, \hyperpage{19}
+  \item {generateBits}
+    \subitem {func.cpp}, \hyperpage{12}
+    \subitem {func.h}, \hyperpage{20}
+
+  \indexspace
+
+  \item {incompleteGammaContinuedFrac}
+    \subitem {func.cpp}, \hyperpage{12}
+    \subitem {func.h}, \hyperpage{20}
+  \item {incompleteGammaSeries}
+    \subitem {func.cpp}, \hyperpage{12}
+    \subitem {func.h}, \hyperpage{21}
+
+  \indexspace
+
+  \item {LCG}, \hyperpage{5}
+    \subitem {LCG}, \hyperpage{5}
+    \subitem {next}, \hyperpage{6}
+  \item {longestRunOnesTestP}
+    \subitem {func.cpp}, \hyperpage{13}
+    \subitem {func.h}, \hyperpage{21}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{25}
+  \item {main.cpp}, \hyperpage{24}
+    \subitem {main}, \hyperpage{25}
+  \item {MiddleSquare}, \hyperpage{6}
+    \subitem {MiddleSquare}, \hyperpage{6}
+    \subitem {next}, \hyperpage{7}
+  \item {monobitTestP}
+    \subitem {func.cpp}, \hyperpage{13}
+    \subitem {func.h}, \hyperpage{22}
+
+  \indexspace
+
+  \item {next}
+    \subitem {LCG}, \hyperpage{6}
+    \subitem {MiddleSquare}, \hyperpage{7}
+    \subitem {Xorshift32}, \hyperpage{8}
+
+  \indexspace
+
+  \item {performNISTTests}
+    \subitem {func.cpp}, \hyperpage{13}
+    \subitem {func.h}, \hyperpage{22}
+  \item {Phi}
+    \subitem {func.cpp}, \hyperpage{14}
+    \subitem {func.h}, \hyperpage{23}
+  \item {plt.py}, \hyperpage{26}
+
+  \indexspace
+
+  \item {runsTestP}
+    \subitem {func.cpp}, \hyperpage{14}
+    \subitem {func.h}, \hyperpage{24}
+
+  \indexspace
+
+  \item {Xorshift32}, \hyperpage{7}
+    \subitem {next}, \hyperpage{8}
+    \subitem {Xorshift32}, \hyperpage{7}
+
+\end{theindex}

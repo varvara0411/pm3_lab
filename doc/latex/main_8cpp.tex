@@ -1,0 +1,57 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Random Number Generator Testing Application.  
+
+
+{\ttfamily \#include \char`\"{}func.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function for random number generator testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This program evaluates and compares four pseudo-\/random number generators\+:
+\begin{DoxyEnumerate}
+\item Linear Congruential Generator (\mbox{\hyperlink{classLCG}{LCG}})
+\item \mbox{\hyperlink{classXorshift32}{Xorshift32}}
+\item Middle Square Method
+\item Mersenne Twister (std\+::mt19937)
+\end{DoxyEnumerate}
+
+The evaluation includes statistical tests and performance benchmarks. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Exit code (0 for success)
+\end{DoxyReturn}
+The program performs the following operations\+:
+\begin{DoxyEnumerate}
+\item Generates test sequences for each PRNG algorithm
+\item Saves sequences to files for further analysis
+\item Conducts statistical analysis\+:
+\begin{DoxyItemize}
+\item Basic statistics (mean, standard deviation, coefficient of variation)
+\item Uniformity test (chi-\/square)
+\item Randomness tests (NIST test suite)
+\end{DoxyItemize}
+\item Measures and compares generation performance
+\item Outputs results in both human-\/readable and CSV formats 
+\end{DoxyEnumerate}

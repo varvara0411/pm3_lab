@@ -1,0 +1,5 @@
+<map id="func.h" name="func.h">
+<area shape="rect" id="node1" title="Declaration of random number generators (LCG, Xorshift32, MiddleSquare) and statistical test function..." alt="" coords="65,5,127,32"/>
+<area shape="rect" id="node2" href="$func_8cpp.html" title="Implementation of random number generators and statistical tests for randomness analysis." alt="" coords="5,80,83,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Random Number Generator Testing Application." alt="" coords="107,80,189,107"/>
+</map>
