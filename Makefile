@@ -29,8 +29,8 @@ run: all
 # Полный запуск
 full: clean-all all run graphs report
 
-# Очистка файлов с выборками
-clean-samples:
+# Очистка результатов
+clean-result:
 	rm -f times.csv
 
 # Очистка исполняемого файла
@@ -38,4 +38,4 @@ clean:
 	rm -f $(TARGET)
 
 # Полная очистка
-clean-all: clean-samples clean
+clean-all: clean-result clean
